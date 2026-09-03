@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>浅草エシカルプロジェクト | 浅草の文化から「エシカルに生きる」を学ぶ</title>
+<meta name="description" content="浅草の文化や季節行事から日本の心性を学び、本質的な「エシカルに生きる」を目指すプロジェクトです。">
+
+<!-- OGP（画像を用意したら og:image のパスを差し替えてください） -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="浅草エシカルプロジェクト">
+<meta property="og:description" content="浅草の文化や季節行事から日本の心性を学び、本質的な「エシカルに生きる」を目指しています。">
+<meta property="og:image" content="images/ogp.jpg">
+
+<link rel="icon" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ ヘッダー ============ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="logo" href="#hero">
+      <img class="logo__img" src="images/logo.png" alt="浅草エシカルプロジェクト">
+      <span class="logo__en">ASAKUSA ETHICAL PROJECT</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="globalNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="globalNav" aria-label="グローバルナビゲーション">
+      <ul class="nav__list">
+        <li><a href="#about"><span class="nav__ja">私たちについて</span><span class="nav__en">ABOUT</span></a></li>
+        <li><a href="#members"><span class="nav__ja">メンバー</span><span class="nav__en">MEMBERS</span></a></li>
+        <li><a href="#activities"><span class="nav__ja">活動</span><span class="nav__en">ACTIVITIES</span></a></li>
+        <li><a href="#instagram"><span class="nav__ja">インスタグラム</span><span class="nav__en">INSTAGRAM</span></a></li>
+        <li><a href="#overview"><span class="nav__ja">団体概要</span><span class="nav__en">OVERVIEW</span></a></li>
+        <li><a href="#contact"><span class="nav__ja">お問い合わせ</span><span class="nav__en">CONTACT</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay" hidden></div>
+
+<main>
+
+  <!-- ============ 1. ヒーロー ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__veil" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="hero__lead">はじめまして！浅草エシカルプロジェクトです</p>
+      <h1 class="hero__title">
+        <span class="hero__title-main">浅草エシカル<br class="sp-only">プロジェクト</span>
+        <span class="hero__title-sub">ASAKUSA ETHICAL PROJECT</span>
+      </h1>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#about">私たちについて</a>
+        <a class="btn btn--ghost" href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+
+    <!--
+      活動写真の帯：右から左へ流れ続けます。
+      同じ10枚を2組ならべ、track を -50% 動かすことで途切れなくループします。
+      写真を差し替える／増やすときは、必ず両方の組に同じ順で入れてください。
+    -->
+    <div class="hero__marquee">
+      <ul class="marquee__track">
+        <li class="marquee__item"><img src="images/photos/kimono-trio.jpg" alt="着物で浅草寺を訪れたときの様子"></li>
+        <li class="marquee__item"><img src="images/photos/umeshigoto.jpg" alt="梅仕事の会の様子"></li>
+        <li class="marquee__item"><img src="images/photos/temple-reading.jpg" alt="本堂で本を読む参加者"></li>
+        <li class="marquee__item"><img src="images/photos/natsumoude.jpg" alt="浴衣で夏詣に出かけたときの様子"></li>
+        <li class="marquee__item"><img src="images/photos/dokushokai.jpg" alt="カフェでの読書会の集合写真"></li>
+        <li class="marquee__item"><img src="images/photos/hanami-tea.jpg" alt="桜の下でのお茶会の様子"></li>
+        <li class="marquee__item"><img src="images/photos/machiaruki.jpg" alt="まち歩きの集合写真"></li>
+        <li class="marquee__item"><img src="images/photos/study.jpg" alt="勉強会で語り合う様子"></li>
+        <li class="marquee__item"><img src="images/photos/kimono-group.jpg" alt="着物で浅草寺に集まったときの様子"></li>
+        <li class="marquee__item"><img src="images/photos/temple-books.jpg" alt="本堂での読書会の集合写真"></li>
+
+        <!-- 2組目（ループ用の複製・読み上げ対象外） -->
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/kimono-trio.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/umeshigoto.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/temple-reading.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/natsumoude.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/dokushokai.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/hanami-tea.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/machiaruki.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/study.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/kimono-group.jpg" alt=""></li>
+        <li class="marquee__item" aria-hidden="true"><img src="images/photos/temple-books.jpg" alt=""></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!--
+    次回イベントのお知らせ帯。
+    開催が決まったら .notice-bar__text の中身を差し替えてください。
+    リンクを付けたい場合は <a href="..."> で囲めばそのまま使えます。
+  -->
+  <section class="notice-bar" id="next-event" aria-label="次回イベント情報">
+    <div class="container notice-bar__inner">
+      <p class="notice-bar__label">次回イベント情報</p>
+      <p class="notice-bar__text">決まり次第掲載します。</p>
+    </div>
+  </section>
+
+
+  <!-- ============ 2. 浅草エシカルプロジェクトとは ============ -->
+  <section class="section section--about" id="about">
+    <div class="container">
+      <header class="sec-head reveal">
+        <img loading="lazy" decoding="async" class="kototori kototori--head" src="images/character/kototori-stand.jpg" alt="" aria-hidden="true">
+        <p class="sec-head__en">ABOUT</p>
+        <h2 class="sec-head__ja">浅草エシカルプロジェクトとは</h2>
+      </header>
+
+      <div class="about__body">
+        <div class="about__text reveal">
+          <!-- 資料「活動ビジョン」より -->
+          <p class="about__tag about__tag--top"><span>日本文化 × エシカル</span></p>
+          <p class="about__catch">日本の心性を学び、<span class="accent">「本質的なエシカルに生きるとは何か」</span>を考え、実践していく</p>
+          <p>エシカルとは、単に「環境に配慮すること」や「誰かのために良いことをすること」だけではありません。それは、「私は社会の中で、どのように生きるのか」という、自分なりの規範を持つこと。</p>
+          <p>人は孤立した「個」ではなく、家族や地域、自然などさまざまな「間柄」の中に生きる存在です。そうした関係性にあるものを感じ取り、互いに生かし合うためにどんな選択をするか。その拠り所となる価値観は、日本の美意識や暮らしの実践、身体感覚に息づいています。</p>
+          <p>私たちは、季節の行事や日本文化に触れながら、そうした知恵や価値観を見つめ直し、「自分にとってのエシカルとは何か」を、一人ひとりが考えていく場を提供します。</p>
+          <p>そしてそこから得た気づきを日々の選択や生き方に還元し、日本文化が息づく社会を作っていく。浅草エシカルプロジェクトは、そんないきいきとした社会の実現に貢献します。</p>
+          <p class="about__closing">自分のためにも、他者のためにも、社会のためにも、<br class="sp-only">大人の嗜みとしてエシカルを。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ 3. メンバー ============ -->
+  <section class="section section--members" id="members">
+    <div class="container">
+      <header class="sec-head reveal">
+        <img loading="lazy" decoding="async" class="kototori kototori--head" src="images/character/kototori-point.jpg" alt="" aria-hidden="true">
+        <p class="sec-head__en">MEMBERS</p>
+        <h2 class="sec-head__ja">メンバー</h2>
+        <p class="sec-head__desc">浅草エシカルプロジェクトを運営する3人を紹介します。</p>
+      </header>
+
+      <ul class="members">
+        <!-- メンバー1 -->
+        <li class="member reveal">
+          <div class="member__photo">
+            <img loading="lazy" decoding="async" src="images/member01.jpg" alt="鈴木 那美さんのプロフィール写真">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">鈴木　那美<span class="member__name-en">Nami Suzuki</span></h3>
+            <p class="member__sns">
+              <a href="https://www.instagram.com/nami__sz/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>@nami__sz
+              </a>
+            </p>
+            <p class="member__text">浅草歴5年目。浅草の新旧が交差する豊かさや懐の深さ、季節ごとの異なる顔にすっかり虜に。心と行動の両方でエシカルの表現者になるべく、日々精進。普段は国研発スタートアップ支援。</p>
+            <ul class="member__tags">
+              <li>Think globally, act locally</li>
+              <li>事業開発</li>
+              <li>あさくさんぽ</li>
+            </ul>
+          </div>
+        </li>
+        <!-- メンバー2 -->
+        <li class="member reveal">
+          <div class="member__photo">
+            <img loading="lazy" decoding="async" src="images/member02.jpg" alt="宮本 紗代さんのプロフィール写真">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">宮本　紗代<span class="member__name-en">Sayo Miyamoto</span></h3>
+            <p class="member__sns">
+              <a href="https://www.instagram.com/sayomiyamoto/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>@sayomiyamoto
+              </a>
+            </p>
+            <p class="member__text">浅草歴6年目。神様仏様に守られた素敵な町から感じ学ぶことがたくさん。煎茶道や水墨画もお稽古中。これからの時代、ますます個人の倫理的意思決定力が求められると感じている…　普段はがんの相談支援に関わる看護師。</p>
+            <ul class="member__tags">
+              <li>小笠原流煎茶道師範</li>
+              <li>神社検定2級</li>
+              <li>エシカルコンシェルジュ</li>
+            </ul>
+          </div>
+        </li>
+        <!-- メンバー3 -->
+        <li class="member reveal">
+          <div class="member__photo">
+            <img loading="lazy" decoding="async" src="images/member03.jpg" alt="金子 菜々美さんのプロフィール写真">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">金子　菜々美<span class="member__name-en">Nanami Kaneko</span></h3>
+            <p class="member__sns">
+              <a href="https://www.instagram.com/nanami_kaneko/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>@nanami_kaneko
+              </a>
+            </p>
+            <p class="member__text">生まれも育ちも浅草。慣れ親しんだ心落ち着く場所でありながら、きっといつまでも飽きることのない、新旧の入り混じった魅力に溢れた街。エシカル（倫理）を通して自分の在りたい姿を問い、生き方を律する日々。普段は司会業。</p>
+            <ul class="member__tags">
+              <li>浅草検定上級</li>
+              <li>発酵ソムリエ</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <!-- 公式キャラクター（メンバーより少し小さく紹介しています） -->
+      <div class="mascot reveal">
+        <div class="mascot__photo">
+          <img loading="lazy" decoding="async" src="images/character/kototori-stand.jpg" alt="コトトリちゃん">
+          <a class="mascot__bubble" href="https://store.line.me/stickershop/product/30855680/ja" target="_blank" rel="noopener">LINEスタンプ販売中</a>
+        </div>
+        <div class="mascot__body">
+          <h3 class="mascot__name">コトトリちゃん</h3>
+          <p class="mascot__text">浅草エシカルプロジェクト公式キャラクター。言問橋出身。好奇心旺盛な性格♪言葉を交わし問答する場に突如として現れる。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ 4. 活動 ============ -->
+  <section class="section section--activities" id="activities">
+    <div class="container">
+      <header class="sec-head reveal">
+        <img loading="lazy" decoding="async" class="kototori kototori--head" src="images/character/kototori-cheer.jpg" alt="" aria-hidden="true">
+        <p class="sec-head__en">ACTIVITIES</p>
+        <h2 class="sec-head__ja">活動</h2>
+        <p class="sec-head__desc">エシカルな心を育てるための、3つの取り組み。</p>
+      </header>
+
+      <ul class="activities">
+        <li class="activity reveal">
+          <p class="activity__num">01</p>
+          <div class="activity__body">
+            <h3 class="activity__title">自分の周りの環境を敬い、思いやる体験からエシカルな心を育てる</h3>
+            <ul class="activity__hash">
+              <li><button type="button" class="hash-btn" data-modal="fukufuku">浅草ふくふく交換会</button></li>
+              <li><button type="button" class="hash-btn" data-modal="cleanup">浅草ナイトクリーンアップ</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="activity reveal">
+          <p class="activity__num">02</p>
+          <div class="activity__body">
+            <h3 class="activity__title">日本の心性に触れる体験から心を育てる</h3>
+            <p>祈り敬う心。共生や和を重んじる心。過程を味わい大切にする心。</p>
+            <ul class="activity__hash">
+              <li><button type="button" class="hash-btn" data-modal="irodoru">季節を愛でる　人生彩る会</button></li>
+              <li><button type="button" class="hash-btn" data-modal="kimonobu">浅草きもの部</button></li>
+              <li><button type="button" class="hash-btn" data-modal="collab">浅草のお店とつくる、コラボイベント</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="activity reveal">
+          <p class="activity__num">03</p>
+          <div class="activity__body">
+            <h3 class="activity__title">自分のエシカルを探す。見つける。考え続ける。</h3>
+            <ul class="activity__hash">
+              <li><button type="button" class="hash-btn" data-modal="benkyokai">コトトイカフェ勉強会</button></li>
+              <li><button type="button" class="hash-btn" data-modal="chakai">問答茶会・身体で愉しむ茶会</button></li>
+              <li><button type="button" class="hash-btn" data-modal="dokusho">浅草読書会・ジャーナリング会</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="activity reveal">
+          <p class="activity__num">04</p>
+          <div class="activity__body">
+            <h3 class="activity__title">ポッドキャスト「人生かけて文化を愉しみたい！」</h3>
+            <div class="activity__media">
+              <a class="activity__cover" href="https://stand.fm/channels/62749fdbfd1be6fc4686f1fb" target="_blank" rel="noopener">
+                <img loading="lazy" decoding="async" src="images/podcast-cover.jpg" alt="ポッドキャスト「人生かけて文化を愉しみたい！」のカバー画像">
+              </a>
+              <div class="activity__media-text">
+                <p>浅草エシカルプロジェクトのさよとなみ、ときどきななみが人生をかけて愉しんでいる様々な日本文化、世界の文化を毎回紹介形式で発信しています。</p>
+                <p>みなさまのワクワクのきっかけになりますように。</p>
+                <ul class="activity__link">
+                  <li><a href="https://stand.fm/channels/62749fdbfd1be6fc4686f1fb" target="_blank" rel="noopener">stand.fm で聴く</a></li>
+                  <li><a href="https://open.spotify.com/show/033mQhyW4iE9ctOpI4UVVq" target="_blank" rel="noopener">Spotify で聴く</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!--
+      イベントの詳細（ポップアップ）
+      ＃のボタンに data-modal="◯◯" を付け、同じ名前で id="modal-◯◯" の dialog を用意すると開きます。
+      他のイベントも同じ形で増やせます。
+    -->
+    <dialog class="modal" id="modal-fukufuku" aria-labelledby="modal-fukufuku-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash">＃浅草ふくふく交換会</p>
+          <h3 class="modal__title" id="modal-fukufuku-title">浅草エシカルプロジェクト presents 洋服交換会</h3>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/fukufuku-rack.jpg" alt="思い出タグのついた洋服が並ぶハンガーラック">
+          </figure>
+          <figure class="modal__photo">
+            <img loading="lazy" decoding="async" src="images/events/fukufuku-tag.jpg" alt="思い出タグに服のエピソードを書き込む参加者">
+          </figure>
+          <figure class="modal__photo">
+            <img loading="lazy" decoding="async" src="images/events/fukufuku-exchange.jpg" alt="服を手渡しながら話す参加者たち">
+          </figure>
+          <figure class="modal__photo">
+            <img loading="lazy" decoding="async" src="images/events/fukufuku-blouse.jpg" alt="交換した刺繍のブラウスを手に笑顔の参加者">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p class="modal__lead">ただの洋服交換会ではありません。</p>
+          <p>服と一緒に、その服にまつわる思い出やストーリーを「思い出タグ」に託して、次の人へ。</p>
+          <p>その場で持ち主からエピソードを聞くことで、「ただの服」だったものが、誰かにとって特別な一着になることもあります。</p>
+          <p>モノが人から人へと巡っていくことは、一見すると原始的な営みにも見えます。けれど、そこには「いくらで買ったか」では測れない価値や、人と人との信頼があります。</p>
+          <p>モノを介して誰かの思いを受け取り、また誰かへ手渡していく。</p>
+          <p>モノが巡ることは、貨幣で価値を交換するよりも、人の心や想像力が試される、奥深く豊かな営みなのかもしれません。</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="modal-cleanup" aria-labelledby="modal-cleanup-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash">＃浅草ナイトクリーンアップ</p>
+          <h3 class="modal__title" id="modal-cleanup-title">浅草を歩き、感じ、考える。</h3>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/cleanup-group.jpg" alt="ライトアップされた浅草寺の前で記念撮影する参加者たち">
+          </figure>
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/cleanup-street.jpg" alt="夜の江戸通りでごみを拾う参加者たち">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p>一見きれいに見える浅草も、歩いてみると、物陰や路地裏にひっそりとごみがあることに気が付きます。</p>
+          <p>「こんなところに捨てたらバチが当たるのにね」<br>ごみを拾いながら、そんな日本に息づく感性に気が付くことがあります。</p>
+          <p>平日の夜にちょっといいことをしてまた明日から頑張れるように。そして昼間とは違う、ライトアップされた浅草寺や浅草神社の美しさも知ってほしい！　そんな思いからナイトクリーンアップを開催しています。</p>
+          <p class="modal__closing">街をきれいにするだけではない。<br>浅草を歩き、感じ、考える。そんな浅草ナイトクリーンアップです。</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="modal-irodoru" aria-labelledby="modal-irodoru-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash">＃季節を愛でる　人生彩る会</p>
+          <h3 class="modal__title" id="modal-irodoru-title">「本当に豊かな暮らしとは何だろう？」を見つめ直す</h3>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery modal__gallery--2col">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/photos/natsumoude.jpg" alt="浴衣で夏詣に出かけたときの様子">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/photos/umeshigoto.jpg" alt="梅仕事の会で仕込んだ梅の瓶と参加者">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/irodoru-hanami.jpg" alt="桜の下、着物でお花見をする参加者">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p class="modal__lead">節気や節句に合わせた茶会をはじめ、味噌や梅など季節の仕込みもの、夏詣や七福神巡りなど、四季の移ろいを楽しむイベントをみんなで。</p>
+          <p>季節を愛でること、ときにスロータイムを味わうこと、そのイベントに込められた思いに触れ、感じたことを言葉にすること。</p>
+          <p>そんな時間を過ごすと、普段の忙しい暮らしでは気が付かなかった身の回りの小さな変化や豊かさに気づくことがあります。</p>
+          <p class="modal__closing">季節を感じることは、人生を豊かに彩ること。<br>日本の四季と文化を楽しみながら、「本当に豊かな暮らしとは何だろう？」を見つめ直す会です。</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="modal-kimonobu" aria-labelledby="modal-kimonobu-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash">＃浅草きもの部</p>
+          <h3 class="modal__title" id="modal-kimonobu-title">着る、知る、歩く。</h3>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/kimonobu-lesson.jpg" alt="畳の上で着物や帯について学ぶ参加者たち">
+          </figure>
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/kimonobu-asakusa.jpg" alt="着物姿で浅草寺を訪れた参加者たち">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p class="modal__lead">着物を自分で着て、もっと気軽に楽しみたい。そして、着物のことを知り、その自分の言葉で語れるようになりたい！</p>
+          <p>そんなメンバーの想いから、浅草きもの部が発足しました。</p>
+          <p>着物を着たら、いざ浅草さんぽへ。街を歩きながら浅草の歴史や文化をクイズ形式で学んだり、おすすめスポットを巡ったり。</p>
+          <p class="modal__closing">着る、知る、歩く。<br>着物を通して、浅草をもっと好きになる。そんな時間を楽しんでいます。</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="modal-collab" aria-labelledby="modal-collab-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash" id="modal-collab-title">＃浅草のお店とつくる、コラボイベント</p>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/collab-masuhiro.jpg" alt="酒商升宏さんでの日本酒テイスティングイベントの様子">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p class="modal__lead">浅草で日本文化を受け継ぎ、伝えているお店と一緒に、その魅力を知り、楽しむイベントを企画しています。</p>
+          <p>たとえば、合羽橋にある酒商升宏さんとのコラボレーションでは、毎回テーマを決め、日本の発酵文化を深掘り。</p>
+          <p>実際に味わいながら、発酵の違いや奥深さを知り、「違いがわかる」楽しさを味わうテイスティングイベントを開催しています。</p>
+          <p>知るだけではなく、味わう。<br>お店の人から話を聞き、その文化を体験する。浅草に根づくお店との出会いを通して、日本文化をもっと身近に、もっと楽しむ。</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="modal-benkyokai" aria-labelledby="modal-benkyokai-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash">＃コトトイカフェ勉強会</p>
+          <h3 class="modal__title" id="modal-benkyokai-title">知る、問う、語る。</h3>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery modal__gallery--2col">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/benkyokai-cafe.jpg" alt="コトトイカフェで発表するメンバーと聞き入る参加者たち">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/benkyokai-online1.jpg" alt="オンラインで開催した勉強会に集まった参加者たち">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/benkyokai-online2.jpg" alt="お茶を片手にオンラインで語り合う参加者たち">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p class="modal__lead">ドリンク片手に「リンリ」や「エシカル」を知る・問う・語る勉強会。</p>
+          <p>少し知識をつけて、エシカルを考えてみる。誰かの考えを聞き、自分の考えを言葉にしてみる。</p>
+          <p>対話を通して、「私はどう生きたいのか」を深めていきます。</p>
+          <p>これまでこんなテーマで開催してきました。</p>
+          <p>第1回　人生の必需品！どう生きる？につながる倫理<br>第2回　間柄としての自分、日本のエシカル哲学<br>第3回　文化感覚距離から知る日本文化</p>
+          <p>その他、上映会などを掛け合わせた場も企画しています。</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="modal-chakai" aria-labelledby="modal-chakai-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash">＃問答茶会・身体で愉しむ茶会</p>
+          <h3 class="modal__title" id="modal-chakai-title">「頭」と「身体」で考える。</h3>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery modal__gallery--2col">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/events/chakai-group.jpg" alt="着物姿で問答茶会に集まった参加者たちの集合写真">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/chakai-cards.jpg" alt="浅草エシカルプロジェクトが用意した問いのカード">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/chakai-yoga.jpg" alt="ヨガとコラボレーションした身体で愉しむ茶会の参加者たち">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p class="modal__lead">浅草エシカルプロジェクト、オリジナル茶会。</p>
+          <p>問答茶会では、お茶やお菓子を楽しみながら、浅草エシカルプロジェクトが用意した問いを囲み、「私のエシカル（理）を私に問う」時間を過ごします。<br>（毎回こだわりの浅草銘菓をお届け）</p>
+          <p>身体で愉しむ茶会は、ヨガとのコラボレーション。</p>
+          <p>味や香り、音、温度、手触りなど、五感、ときには六感を通してお茶に込められた精神性を味わいながら、日々の暮らしにもつながる「身体知」を育みます。</p>
+          <p class="modal__closing">普段の茶会とは少し違う、<br>エシカルを「頭」と「身体」の両方から考える茶会です。</p>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="modal-dokusho" aria-labelledby="modal-dokusho-title">
+      <div class="modal__inner">
+        <div class="modal__head">
+          <p class="modal__hash">＃浅草読書会・ジャーナリング会</p>
+          <h3 class="modal__title" id="modal-dokusho-title">言葉を手がかりに、自分を見つめる。</h3>
+          <button type="button" class="modal__close" aria-label="閉じる">×</button>
+        </div>
+
+        <div class="modal__gallery">
+          <figure class="modal__photo modal__photo--wide">
+            <img loading="lazy" decoding="async" src="images/photos/study.jpg" alt="本を手に語り合う浅草読書会の参加者たち">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/dokusho-shiori.jpg" alt="心に留まった言葉を書き留めたワークシート「言葉のしおり」">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/dokusho-temple.jpg" alt="お寺の本堂で静かに本を読む参加者たち">
+          </figure>
+          <figure class="modal__photo modal__photo--land">
+            <img loading="lazy" decoding="async" src="images/events/dokusho-books.jpg" alt="メンバーがセレクトした「今月の本棚」に並ぶ本">
+          </figure>
+        </div>
+
+        <div class="modal__body">
+          <p>浅草読書会では、オリジナルのワークシート「言葉のしおり」を使い、本の中で心に響いた言葉を書き留めます。</p>
+          <p>「どうして、この言葉が心に響いたんだろう？」<br>「この気づきを、これからの生活にどう還元しよう？」</p>
+          <p>言葉を手がかりに、自分の価値観や生き方を見つめ、「私のエシカル（理）」について考える読書会です。</p>
+          <p>毎回、浅草エシカルメンバーがセレクトした「今月の本棚」もご用意。<br>本との出会いを楽しみながら、自分と向き合う時間をつくります。</p>
+          <p>ジャーナリング会は、夏越と年越の大祓の時期に開催。</p>
+          <p>一年の半ばと終わりに立ち止まり、これまでの日々を振り返る。<br>昔の人が大祓を、日々の穢れを祓い、心を新たにする節目としてきたように、私たちも言葉にしながら自分を見つめ直します。</p>
+        </div>
+      </div>
+    </dialog>
+  </section>
+
+
+  <!-- ============ 5. Instagram ============ -->
+  <section class="section section--instagram" id="instagram">
+    <div class="container">
+      <header class="sec-head reveal">
+        <img loading="lazy" decoding="async" class="kototori kototori--head" src="images/character/kototori-fly.jpg" alt="" aria-hidden="true">
+        <p class="sec-head__en">INSTAGRAM</p>
+        <h2 class="sec-head__ja">インスタグラム</h2>
+        <p class="sec-head__desc">日々の活動は Instagram で発信しています。<br class="sp-only">ぜひフォローしてください。</p>
+      </header>
+
+      <!--
+        Instagram公式の埋め込みです。data-instgrm-permalink の URL を
+        差し替えると、表示する投稿を変えられます（3つまでを目安に）。
+        ページ末尾の embed.js が読み込まれて初めてカードが描画されます。
+      -->
+      <div class="ig-embeds reveal">
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/reel/DZR1v3sJTo4/?utm_source=ig_embed" data-instgrm-version="14">
+          <a href="https://www.instagram.com/reel/DZR1v3sJTo4/" target="_blank" rel="noopener">@asakusa_ethical の投稿を見る</a>
+        </blockquote>
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/reel/DcnWEltJvgQ/?utm_source=ig_embed" data-instgrm-version="14">
+          <a href="https://www.instagram.com/reel/DcnWEltJvgQ/" target="_blank" rel="noopener">@asakusa_ethical の投稿を見る</a>
+        </blockquote>
+        <blockquote class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/reel/Db-XcU8Js2q/?utm_source=ig_embed" data-instgrm-version="14">
+          <a href="https://www.instagram.com/reel/Db-XcU8Js2q/" target="_blank" rel="noopener">@asakusa_ethical の投稿を見る</a>
+        </blockquote>
+      </div>
+
+      <div class="ig-cta reveal">
+        <p class="ig-cta__text">最新の活動やイベントのお知らせは Instagram から。</p>
+        <a class="btn btn--primary" href="https://www.instagram.com/asakusa_ethical/" target="_blank" rel="noopener">@asakusa_ethical をフォロー</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ 7. 団体概要 ============ -->
+  <section class="section section--overview" id="overview">
+    <div class="container">
+      <header class="sec-head reveal">
+        <p class="sec-head__en">OVERVIEW</p>
+        <h2 class="sec-head__ja">団体概要</h2>
+      </header>
+
+      <dl class="overview reveal">
+        <div class="overview__row">
+          <dt>団体名</dt>
+          <dd>浅草エシカルプロジェクト</dd>
+        </div>
+        <div class="overview__row">
+          <dt>設立</dt>
+          <dd>2020年8月</dd>
+        </div>
+        <div class="overview__row">
+          <dt>共同代表</dt>
+          <dd>宮本　紗代／鈴木　那美／金子　菜々美</dd>
+        </div>
+        <div class="overview__row">
+          <dt>活動内容</dt>
+          <dd>日本文化×エシカルを軸としたイベント・勉強会企画／講演／SNSでの情報発信等</dd>
+        </div>
+        <div class="overview__row">
+          <dt>SNS</dt>
+          <dd><a href="https://www.instagram.com/asakusa_ethical/" target="_blank" rel="noopener">Instagram @asakusa_ethical</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+
+  <!-- ============ 8. お問い合わせ ============ -->
+  <section class="section section--contact" id="contact">
+    <div class="container">
+      <header class="sec-head sec-head--light reveal">
+        <span class="kototori-badge" aria-hidden="true">
+          <img loading="lazy" decoding="async" class="kototori" src="images/character/kototori-stand.jpg" alt="">
+        </span>
+        <p class="sec-head__en">CONTACT</p>
+        <h2 class="sec-head__ja">お問い合わせ</h2>
+        <p class="sec-head__desc">取材・協業・イベント参加のご相談など、お気軽にご連絡ください。</p>
+      </header>
+
+      <!--
+        送信先：Googleフォーム「浅草エシカルプロジェクト　お問い合わせフォーム」
+        各項目の name="entry.〇〇" がGoogleフォームの質問と1対1で対応しています。
+        ★Googleフォーム側で質問を追加・削除・並べ替えすると、このIDが変わって
+          送信が届かなくなることがあります。フォームを編集したときは必ずご連絡ください。
+        選択肢の文言もフォームと完全に一致している必要があります。
+      -->
+      <form class="contact-form reveal" id="contactForm" method="post"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSezpPrMU7ZcrVFiqtT80lEs8sFzXYFwFfS3OUfOtPwwosM_tQ/formResponse"
+        target="gformTarget">
+        <div class="form-row">
+          <label for="name">お名前 <span class="req">必須</span></label>
+          <input type="text" id="name" name="entry.1056687926" required autocomplete="name" placeholder="浅草 花子">
+        </div>
+        <div class="form-row">
+          <label for="affiliation">団体名／肩書 <span class="req">必須</span></label>
+          <input type="text" id="affiliation" name="entry.1284017413" required autocomplete="organization" placeholder="株式会社〇〇　広報部">
+        </div>
+        <div class="form-row">
+          <label for="email">メールアドレス <span class="req">必須</span></label>
+          <input type="email" id="email" name="entry.1168684858" required autocomplete="email" placeholder="example@mail.com">
+        </div>
+        <div class="form-row">
+          <label for="subject">お問い合わせ種別 <span class="req">必須</span></label>
+          <select id="subject" name="entry.30117255" required>
+            <option value="イベント参加について">イベント参加について</option>
+            <option value="協業・ご提案">協業・ご提案</option>
+            <option value="取材・講演依頼">取材・講演依頼</option>
+            <option value="__other_option__">その他</option>
+          </select>
+          <!-- 「その他」を選んだときにGoogleフォームへ渡す文言 -->
+          <input type="hidden" name="entry.30117255.other_option_response" value="その他">
+        </div>
+        <div class="form-row">
+          <label for="message">お問い合わせ内容 <span class="req">必須</span></label>
+          <textarea id="message" name="entry.2141878497" rows="6" required placeholder="ご相談内容をご記入ください。"></textarea>
+        </div>
+        <p class="form-note">ご記入いただいた内容は、お問い合わせへの返信のみに使用します。</p>
+        <div class="form-actions">
+          <button type="submit" class="btn btn--primary btn--wide">送信する</button>
+        </div>
+      </form>
+
+      <!-- 送信完了メッセージ（送信するまでは非表示） -->
+      <div class="form-thanks" id="formThanks" hidden>
+        <p class="form-thanks__title">送信しました。</p>
+        <p class="form-thanks__text">お問い合わせありがとうございます。<br>内容を確認のうえ、担当より折り返しご連絡いたします。</p>
+      </div>
+
+      <!-- Googleフォームへの送信先。ページを遷移させないための受け皿です -->
+      <iframe name="gformTarget" id="gformTarget" title="送信処理" hidden></iframe>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ============ フッター ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo">
+        <img src="images/logo.png" alt="浅草エシカルプロジェクト">
+      </span>
+      <p class="footer__en">ASAKUSA ETHICAL PROJECT</p>
+    </div>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <ul>
+        <li><a href="#about">私たちについて</a></li>
+        <li><a href="#members">メンバー</a></li>
+        <li><a href="#activities">活動</a></li>
+        <li><a href="#instagram">インスタグラム</a></li>
+        <li><a href="#overview">団体概要</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    <p class="footer__sns">
+      <a href="https://www.instagram.com/asakusa_ethical/" target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </div>
+  <p class="copyright">&copy; 2026 ASAKUSA ETHICAL PROJECT</p>
+</footer>
+
+<script src="js/main.js"></script>
+<!-- Instagram公式の埋め込みスクリプト（インスタグラムセクションのカードを描画します） -->
+<script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
